@@ -26,12 +26,13 @@
     <p></p>
     <script>
       const form = document.querySelector('form');
-      const fname = document.getElementById('fname');
+      const fname = document.getElementById('fname'); // 入力フィールド
       const lname = document.getElementById('lname');
-      const para = document.querySelector('p');
+      const para = document.querySelector('p'); // pタグの要素をとる
 
       form.onsubmit = function(e) {
-        if(fname.value === '' || lname.value === '') {
+        if(fname.value === '' || lname.value === '') { // どちらかが値が入っていなければ
+          // デフォルトの操作をやめる、送信しない。
           e.preventDefault();
           para.textContent = 'You need to fill in both names!'
         }else{
